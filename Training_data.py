@@ -25,7 +25,7 @@ while(cntr<11):
 
     print(f'Saving batch {cntr}')
     np.save(f'training/sunset_greyscale_batch_{cntr}.npy', training_data)
-    del training_data[:]
+    del training_data
     cntr+=1
 
 training_data = []
