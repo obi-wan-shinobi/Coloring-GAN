@@ -8,10 +8,10 @@ DIR = 'Data/'
 
 cntr = 0
 image_list = os.listdir(DIR)
-while(cntr<4):
+while(cntr<11):
     training_data = []
     print(f'Reading batch {cntr}')
-    for images in image_list[cntr*5000:(cntr+1)*5000]:
+    for images in image_list[cntr*2000:(cntr+1)*2000]:
         path = os.path.join(DIR,images)
         image = Image.open(path).resize((IMG_SIZE,IMG_SIZE), Image.ANTIALIAS)
         image = ImageOps.grayscale(image)
@@ -30,7 +30,7 @@ while(cntr<4):
 
 training_data = []
 print(f'Reading batch {cntr}')
-for images in image_list[cntr*5000:]:
+for images in image_list[cntr*2000:]:
     path = os.path.join(DIR,images)
     image = Image.open(path).resize((IMG_SIZE,IMG_SIZE), Image.ANTIALIAS)
     image = ImageOps.grayscale(image)
