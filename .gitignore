@@ -2,3 +2,4 @@ output/*
 training/*
 Data/*
 play*.*
+debug.log
